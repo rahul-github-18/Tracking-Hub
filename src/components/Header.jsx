@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail } from 'lucide-react';
+import { Menu, X, Mail, Download } from 'lucide-react';
+import resumePdf from '../assets/Rahul Ranjan - Resume.pdf';
 import './Header.css';
 
 export default function Header() {
@@ -45,6 +46,17 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
+          <a
+            href={resumePdf}
+            download="Rahul_Ranjan_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-resume-header"
+          >
+            <Download size={14} />
+            <span>Resume</span>
+          </a>
+
           <a href="#contact" className="btn-contact-header">
             <Mail size={15} />
             <span>Contact</span>

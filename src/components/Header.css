@@ -74,6 +74,26 @@
   gap: 1rem;
 }
 
+.btn-resume-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1rem;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #eab308;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.btn-resume-header:hover {
+  background: #fef9c3;
+  border-color: #b45309;
+  transform: translateY(-1px);
+}
+
 .btn-contact-header {
   display: inline-flex;
   align-items: center;

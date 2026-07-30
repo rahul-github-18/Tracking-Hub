@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, Phone, ArrowUpRight, FileText, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
+import resumePdf from '../assets/Rahul Ranjan - Resume.pdf';
 import './Hero.css';
 
 export default function Hero() {
@@ -54,6 +55,17 @@ export default function Hero() {
             <LinkedinIcon size={16} />
             <span>LinkedIn</span>
             <ArrowUpRight size={13} />
+          </a>
+          <a
+            href={resumePdf}
+            download="Rahul_Ranjan_Resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-link-btn hero-resume-btn"
+          >
+            <FileText size={16} />
+            <span>Resume</span>
+            <Download size={14} />
           </a>
         </div>
       </div>
