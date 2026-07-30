@@ -38,7 +38,7 @@ export default function Projects() {
         'Reduced manual job tracking and candidate follow-up time by 40% using automated email alerts and chatbot assistance.'
       ],
       tech: ['Java', 'JSP', 'Servlet', 'MySQL', 'AI Chatbot', 'Email API', 'JavaScript', 'HTML5', 'CSS3'],
-      liveUrl: 'https://talenttrack.up.railway.app' // Blank placeholder for live link
+      liveUrl: '' // Blank placeholder for live link
     },
     {
       title: 'Sorting Visualizer and Analyzer',
