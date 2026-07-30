@@ -1,0 +1,223 @@
+.sorting-widget-container {
+  background: rgba(10, 15, 26, 0.9);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.widget-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.widget-icon {
+  color: var(--secondary);
+}
+
+.widget-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #c084fc;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.widget-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.25rem;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.widget-select {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.widget-slider {
+  accent-color: var(--primary);
+  width: 90px;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.widget-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.btn-play {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-play:hover {
+  background: var(--primary-hover);
+}
+
+.btn-pause {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-reset {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-sub);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-reset:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-main);
+}
+
+/* Visualizer Stage */
+.visualizer-stage {
+  height: 180px;
+  background: rgba(5, 8, 15, 0.8);
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  padding: 1rem 0.75rem;
+  overflow: hidden;
+}
+
+.bar-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  max-width: 32px;
+}
+
+.array-bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 3px;
+  transition: height 0.15s ease, background-color 0.15s ease;
+}
+
+.bar-val {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.bar-default {
+  background: linear-gradient(to top, var(--primary) 0%, #818cf8 100%);
+}
+
+.bar-comparing {
+  background: linear-gradient(to top, #f59e0b 0%, #fbbf24 100%) !important;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+.bar-swapping {
+  background: linear-gradient(to top, #ef4444 0%, #f87171 100%) !important;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.bar-sorted {
+  background: linear-gradient(to top, #10b981 0%, #34d399 100%) !important;
+}
+
+/* Stats */
+.widget-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat-pill strong {
+  color: var(--text-main);
+  margin-left: 0.3rem;
+}
+
+.stat-legend {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.legend-box {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.legend-box.yellow { background: #f59e0b; }
+.legend-box.red { background: #ef4444; }
+.legend-box.green { background: #10b981; }
+
+@media (max-width: 600px) {
+  .widget-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .visualizer-stage {
+    height: 150px;
+    gap: 3px;
+  }
+  .bar-val {
+    font-size: 0.55rem;
+  }
+}

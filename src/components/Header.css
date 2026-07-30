@@ -1,0 +1,141 @@
+.site-header {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 1020px;
+  z-index: 1000;
+  padding: 0.75rem 1.75rem;
+  background: #fef08a; /* Light yellow background */
+  border: 1px solid #fde047;
+  border-radius: var(--radius-full);
+  box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.45);
+  transition: all var(--transition-normal);
+}
+
+.header-scrolled {
+  padding: 0.65rem 1.5rem;
+  background: #fef08a;
+  box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.55);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.logo-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a; /* Dark text for light yellow bg */
+  letter-spacing: -0.02em;
+}
+
+.logo-role {
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.desktop-nav {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: #0f172a;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-contact-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.1rem;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.btn-contact-header:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  color: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    top: 0.85rem;
+    width: calc(100% - 1.5rem);
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-md);
+  }
+  .logo-role {
+    display: none;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .mobile-drawer {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: #fef08a;
+    border: 1px solid #fde047;
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  .mobile-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}

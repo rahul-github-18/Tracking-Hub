@@ -1,0 +1,37 @@
+.site-footer {
+  border-top: 1px solid #fde047;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  background: #fef08a;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-copy {
+  font-size: 0.88rem;
+  color: #78350f;
+  font-weight: 600;
+}
+
+.scroll-top-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ffffff;
+  border: 1px solid #fde047;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.scroll-top-btn:hover {
+  background: #fef9c3;
+  border-color: #eab308;
+}
