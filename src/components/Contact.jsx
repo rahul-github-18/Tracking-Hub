@@ -88,7 +88,7 @@ export default function Contact() {
                   type="text"
                   id="name"
                   required
-                  placeholder="John Doe"
+                  placeholder="Enter Your Name "
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
@@ -96,11 +96,11 @@ export default function Contact() {
 
               <div className="form-group">
                 <label htmlFor="email">Your Email Address</label>
-                <input
+                <inpu
                   type="email"
                   id="email"
                   required
-                  placeholder="john@example.com"
+                  placeholder="Enter your email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
