@@ -61,11 +61,11 @@ export default function Hero() {
             download="Rahul_Ranjan_Resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="hero-link-btn hero-resume-btn"
+            className="hero-link-btn"
           >
             <FileText size={16} />
             <span>Resume</span>
-            <Download size={14} />
+            <Download size={13} />
           </a>
         </div>
       </div>
