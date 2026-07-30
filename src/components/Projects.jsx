@@ -37,8 +37,8 @@ export default function Projects() {
         'Built administrative dashboards to manage job listings, track application stages, and review applicant metrics efficiently.',
         'Reduced manual job tracking and candidate follow-up time by 40% using automated email alerts and chatbot assistance.'
       ],
-      tech: ['Java', 'JSP', 'Servlet', 'MySQL', 'AI Chatbot', 'Email API', 'JavaScript', 'HTML5', 'CSS3'],
-      liveUrl: '' // Blank placeholder for live link
+      tech: ['Java', 'Spring Boot', 'JSP', 'Servlet', 'MySQL', 'AI Chatbot', 'Email API', 'JavaScript', 'HTML5', 'CSS3'],
+      liveUrl: 'https://talenttrack.up.railway.app' 
     },
     {
       title: 'Sorting Visualizer and Analyzer',
