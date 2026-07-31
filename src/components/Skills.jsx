@@ -4,45 +4,42 @@ import './Skills.css';
 export default function Skills() {
   const skillGroups = [
     {
-      category: 'Programming Languages',
-      items: ['Java', 'Python', 'PHP', 'HTML5', 'CSS3']
+      category: 'Backend',
+      skills: 'Java • Spring Boot • Hibernate • PHP • CodeIgniter • RESTful APIs • Microservices'
     },
     {
-      category: 'Frameworks & APIs',
-      items: ['Spring Boot', 'CodeIgniter 4', 'JSP', 'Servlets', 'RESTful APIs']
+      category: 'Frontend',
+      skills: 'React • JavaScript • HTML5 • CSS3 • Next.js'
     },
     {
-      category: 'Databases',
-      items: ['MySQL', 'PostgreSQL']
+      category: 'Database',
+      skills: 'PostgreSQL • MySQL • Supabase'
     },
     {
-      category: 'Tools & IDEs',
-      items: ['Git', 'GitHub', 'Postman', 'Visual Studio Code', 'Eclipse IDE', 'NetBeans']
+      category: 'Languages',
+      skills: 'Java • Python • PHP • SQL • JavaScript'
+    },
+    {
+      category: 'Tools',
+      skills: 'Git • GitHub • VS Code • IntelliJ IDEA • Postman'
     },
     {
       category: 'Core Concepts',
-      items: ['Data Structures & Algorithms', 'OOPS', 'DBMS', 'Computer Networks', 'SDLC', 'Agile Methodology']
+      skills: 'DSA • OOP • DBMS • Computer Networks • Agile'
     }
   ];
 
   return (
     <section id="skills" className="skills-section">
       <div className="section-header">
-        <span className="section-tag">03</span>
         <h2 className="section-title">Technical Skills</h2>
       </div>
 
-      <div className="clean-card skills-card">
+      <div className="skills-clean-list">
         {skillGroups.map((group, idx) => (
-          <div key={idx} className="skill-line-row">
+          <div key={idx} className="skill-group-row">
             <h3 className="skill-group-name">{group.category}</h3>
-            <div className="skill-pills-wrap">
-              {group.items.map((item, iIdx) => (
-                <span key={iIdx} className="skill-pill">
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="skill-group-text">{group.skills}</p>
           </div>
         ))}
       </div>

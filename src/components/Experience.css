@@ -1,67 +1,71 @@
 .experience-section {
-  border-bottom: 1px solid #fde047;
+  display: flex;
+  flex-direction: column;
 }
 
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.experience-card {
+.exp-card {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 0.85rem;
+  padding: 1.15rem;
 }
 
 .exp-top {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .exp-role {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  color: #0f172a;
+  color: var(--text-main);
+  line-height: 1.2;
 }
 
 .exp-company {
-  font-size: 1rem;
-  color: #b45309; /* Warm Amber */
+  font-size: 0.92rem;
   font-weight: 700;
-  margin-top: 0.15rem;
+  color: var(--accent-amber);
+
 }
 
 .exp-period {
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: #78350f;
-  background: #fef08a;
-  border: 1px solid #fde047;
-  padding: 0.3rem 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-cream-subtle);
+  border: 1px solid var(--border-subtle);
+  padding: 0.15rem 0.55rem;
   border-radius: var(--radius-full);
-  white-space: nowrap;
 }
 
 .exp-bullets {
   list-style-type: disc;
-  padding-left: 1.25rem;
+  padding-left: 1.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  color: #334155;
-  font-size: 0.96rem;
-  line-height: 1.6;
+  gap: 0.35rem;
+}
+
+.exp-bullets li {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  line-height: 1.45;
 }
 
 .exp-tech-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.35rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid #fef08a;
+  gap: 0.35rem;
+  padding-top: 0.35rem;
+  border-top: 1px dashed var(--border-subtle);
 }

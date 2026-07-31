@@ -1,89 +1,98 @@
 import React from 'react';
-import { ArrowUpRight, Globe } from 'lucide-react';
+import { Globe, ArrowUpRight } from 'lucide-react';
+import { GithubIcon } from './SocialIcons';
 import './Projects.css';
 
 export default function Projects() {
   const projects = [
     {
+      id: 'codediary',
       title: 'CodeDiary – Developer Workspace & Learning Platform',
-      category: 'Next.js 14 / Supabase / Full-Stack Platform',
+      category: 'Next.js 14 / Supabase',
       bullets: [
-        'Engineered a modern developer platform with Next.js 14 App Router, React 18, and Supabase for mastering Data Structures & Algorithms, Java, SQL, and System Design.',
-        'Integrated an in-browser code editor powered by Monaco Editor (@monaco-editor/react) enabling real-time code preview and account-free code snippet sharing.',
-        'Built comprehensive visual progress analytics, streak counters, topic completion metrics, and daily learning activity tracking.',
-        'Formulated client-side report generation and data processing using jsPDF for PDF document exports and SheetJS (xlsx) for spreadsheet processing.',
-        'Implemented automated email notifications using Nodemailer alongside optimized backend API requests using Axios.'
+        'Monaco Editor Integration',
+        'Progress Tracking Dashboard',
+        'PDF & Excel Export',
+        'Email Notification System'
       ],
-      tech: [
-        'Next.js 14',
-        'React 18',
-        'Supabase',
-        'Tailwind CSS',
-        'Monaco Editor',
-        'Axios',
-        'Nodemailer',
-        'jsPDF',
-        'SheetJS (xlsx)'
-      ],
+      tech: ['Next.js 14', 'React 18', 'Supabase', 'Monaco Editor', 'Axios', 'jsPDF', 'SheetJS'],
+      githubUrl: 'https://github.com/rahul-github-18',
       liveUrl: 'https://kodediary.vercel.app'
     },
     {
+      id: 'talenttrack',
       title: 'TalentTrack – Job Discovery & Management Platform',
-      category: 'Full-Stack Web Platform',
+      category: 'Java / Spring Boot / PostgreSQL',
       bullets: [
-        'Automated job application tracking through real-time candidate dashboards and automated email notifications, streamlining workflow efficiency.',
-        'Integrated an AI chatbot assistant to guide job seekers, answer application FAQs, and provide instant candidate updates.',
-        'Implemented secure multi-role authentication (Applicant vs Admin) with encrypted access controls and user session management.',
-        'Built administrative dashboards to manage job listings, track application stages, and review applicant metrics efficiently.',
-        'Reduced manual job tracking and candidate follow-up time by 40% using automated email alerts and chatbot assistance.'
+        'Candidate & Application Dashboard',
+        'AI Chatbot Assistant',
+        'Multi-Role Authentication',
+        'Automated Email Alerts'
       ],
-      tech: ['Java', 'Spring Boot', 'JSP', 'Servlet', 'MySQL', 'AI Chatbot', 'Email API', 'JavaScript', 'HTML5', 'CSS3'],
-      liveUrl: 'https://talenttrack.up.railway.app' 
+      tech: ['Java', 'Spring Boot', 'JSP', 'PostgreSQL', 'AI Chatbot', 'Email API'],
+      githubUrl: 'https://github.com/rahul-github-18',
+      liveUrl: 'https://talenttrack.up.railway.app'
     },
     {
-      title: 'Sorting Visualizer and Analyzer',
+      id: 'sorting-visualizer',
+      title: 'Sorting Visualizer and Algorithm Analyzer',
       category: 'Java / Multithreading / GUI',
       bullets: [
-        'Developed an interactive Java GUI application to animate and analyze fundamental sorting algorithms including Bubble, Merge, and Quick Sort.',
-        'Simulated 300+ sorting visualizations to demonstrate algorithm execution, time complexity, and memory performance in real time.',
-        'Engineered multithreaded rendering algorithms, optimizing UI frame rates and reducing rendering latency delay by 30%.',
-        'Implemented custom array generation controls, speed adjustment sliders, and live comparison/swap counter metrics.',
-        'Designed modular Swing & AWT view components adhering to object-oriented programming principles for extensible algorithm additions.'
+        '300+ Array Algorithm Animations',
+        'Multithreaded Frame Optimization',
+        'Speed & Array Controls',
+        'Modular Swing & AWT Architecture'
       ],
-      tech: ['Java', 'Swing', 'AWT', 'Multithreading', 'Algorithms', 'Eclipse IDE'],
-      // liveUrl: '' // Blank placeholder for live link
+      tech: ['Java', 'Swing', 'AWT', 'Multithreading', 'Algorithms'],
+      githubUrl: 'https://github.com/rahul-github-18',
+      liveUrl: '' // NO Live Demo button for Sorting Visualizer
     }
   ];
 
   return (
     <section id="projects" className="projects-section">
       <div className="section-header">
-        <span className="section-tag">02</span>
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">Projects</h2>
       </div>
 
-      <div className="projects-grid">
-        {projects.map((proj, idx) => (
-          <div key={idx} className="clean-card project-card">
-            <div className="proj-top">
-              <span className="proj-category">{proj.category}</span>
-              {proj.liveUrl ? (
-                <a
-                  href={proj.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="proj-live-btn"
-                >
-                  <Globe size={14} />
-                  <span>Live App</span>
-                  <ArrowUpRight size={13} />
-                </a>
-              ) : null}
+      <div className="projects-list">
+        {projects.map((proj) => (
+          <div key={proj.id} className="clean-card proj-card">
+            <div className="proj-top-header">
+              <div>
+                <span className="proj-cat-tag">{proj.category}</span>
+                <h3 className="proj-card-title">{proj.title}</h3>
+              </div>
+
+              <div className="proj-actions">
+                {proj.githubUrl && (
+                  <a
+                    href={proj.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="proj-btn secondary-btn"
+                  >
+                    <GithubIcon size={13} />
+                    <span>GitHub</span>
+                  </a>
+                )}
+
+                {proj.liveUrl ? (
+                  <a
+                    href={proj.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="proj-btn primary-btn"
+                  >
+                    <Globe size={13} />
+                    <span>Live Demo</span>
+                    <ArrowUpRight size={12} />
+                  </a>
+                ) : null}
+              </div>
             </div>
 
-            <h3 className="proj-title">{proj.title}</h3>
-
-            <ul className="proj-bullets">
+            <ul className="proj-short-features">
               {proj.bullets.map((b, bIdx) => (
                 <li key={bIdx}>{b}</li>
               ))}

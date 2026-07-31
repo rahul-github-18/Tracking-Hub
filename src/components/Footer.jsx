@@ -1,23 +1,47 @@
 import React from 'react';
-import { ArrowUp } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import './Footer.css';
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="site-footer">
-      <div className="container footer-container">
-        <span className="footer-copy">
-          © {new Date().getFullYear()} Rahul Ranjan. All rights reserved.
-        </span>
+      <div className="footer-wrap">
+        <div className="footer-brand">
+          <span className="footer-name">Rahul Ranjan</span>
+          <span className="footer-sub">• Software Developer</span>
+        </div>
 
-        <button className="scroll-top-btn" onClick={scrollToTop}>
-          <span>Back to top</span>
-          <ArrowUp size={14} />
-        </button>
+        <div className="footer-links">
+          <a
+            href="https://github.com/rahul-github-18"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-link"
+          >
+            <GithubIcon size={13} />
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/rahul-ranjan-6b2ab424a"
+            target="_blank"
+            rel="noreferrer"
+            className="footer-link"
+          >
+            <LinkedinIcon size={13} />
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="mailto:rahulranjan62067@gmail.com" className="footer-link">
+            <Mail size={13} />
+            <span>Email</span>
+          </a>
+        </div>
+
+        <span className="footer-copy">
+          © {new Date().getFullYear()} Rahul Ranjan
+        </span>
       </div>
     </footer>
   );

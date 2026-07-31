@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, Phone, ArrowUpRight, FileText, Download } from 'lucide-react';
+import { MapPin, Mail, ArrowUpRight, FileText, Download } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import resumePdf from '../assets/Rahul Ranjan - Resume.pdf';
 import './Hero.css';
@@ -7,67 +7,63 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-header-line">
+      <div className="hero-header-meta">
         <div>
-          <span className="hero-role-pill">Software Developer</span>
+          <span className="hero-role-tag">Software Developer</span>
           <h1 className="hero-name">Rahul Ranjan</h1>
         </div>
-        <div className="hero-location-badge">
-          <MapPin size={16} />
+
+        <div className="hero-location">
+          <MapPin size={14} />
           <span>Ranchi, Jharkhand, India</span>
         </div>
       </div>
 
-      {/* Clean Profile Card */}
-      <div className="clean-card hero-card">
-        <p className="hero-summary">
-          Software Developer with experience in designing and developing scalable web applications. 
-          Strong foundation in software engineering, data structures, algorithms, object-oriented programming, 
-          and database management. Committed to building reliable and efficient software solutions.
-        </p>
+      <p className="hero-bio">
+        Software Developer with experience in designing and developing scalable web applications. 
+        Strong foundation in software engineering, data structures, algorithms, object-oriented programming, 
+        and database management. Committed to building reliable and efficient software solutions.
+      </p>
 
-        {/* Contact & Social Links arranged in a clean line */}
-        <div className="hero-contact-line">
-          <a href="mailto:rahulranjan62067@gmail.com" className="hero-link-btn">
-            <Mail size={16} />
-            <span>rahulranjan62067@gmail.com</span>
-          </a>
-          <a href="tel:+916206789352" className="hero-link-btn">
-            <Phone size={16} />
-            <span>+91-6206789352</span>
-          </a>
-          <a
-            href="https://github.com/rahul-github-18"
-            target="_blank"
-            rel="noreferrer"
-            className="hero-link-btn"
-          >
-            <GithubIcon size={16} />
-            <span>GitHub</span>
-            <ArrowUpRight size={13} />
-          </a>
-          <a
-            href="https://linkedin.com/in/rahul-ranjan-6b2ab424a"
-            target="_blank"
-            rel="noreferrer"
-            className="hero-link-btn"
-          >
-            <LinkedinIcon size={16} />
-            <span>LinkedIn</span>
-            <ArrowUpRight size={13} />
-          </a>
-          <a
-            href={resumePdf}
-            download="Rahul_Ranjan_Resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="hero-link-btn"
-          >
-            <FileText size={16} />
-            <span>Resume</span>
-            <Download size={13} />
-          </a>
-        </div>
+      <div className="hero-buttons-row">
+        <a
+          href={resumePdf}
+          download="Rahul_Ranjan_Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="hero-btn primary-btn"
+        >
+          <FileText size={14} />
+          <span>Resume</span>
+          <Download size={12} />
+        </a>
+
+        <a
+          href="https://github.com/rahul-github-18"
+          target="_blank"
+          rel="noreferrer"
+          className="hero-btn secondary-btn"
+        >
+          <GithubIcon size={14} />
+          <span>GitHub</span>
+          <ArrowUpRight size={12} />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/rahul-ranjan-6b2ab424a"
+          target="_blank"
+          rel="noreferrer"
+          className="hero-btn secondary-btn"
+        >
+          <LinkedinIcon size={14} />
+          <span>LinkedIn</span>
+          <ArrowUpRight size={12} />
+        </a>
+
+        <a href="mailto:rahulranjan62067@gmail.com" className="hero-btn secondary-btn">
+          <Mail size={14} />
+          <span>Email</span>
+        </a>
       </div>
     </section>
   );

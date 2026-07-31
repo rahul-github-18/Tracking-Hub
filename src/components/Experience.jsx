@@ -6,23 +6,24 @@ export default function Experience() {
     {
       company: 'Mica Educational Co. Pvt. Ltd.',
       role: 'Software Developer',
-      period: 'June 2026 - Present',
+      period: 'June 2026 – Present',
       bullets: [
         'Engineered and maintained 5+ business modules using PHP, CodeIgniter 4, Java, Spring Boot, and MySQL.',
-        'Designed 10+ RESTful APIs and implemented backend features for scalable applications.',
-        'Maintained 10+ application performance by troubleshooting issues and optimizing existing features.',
-        'Integrated WhatsApp APIs, payment gateways, and AI chatbot solutions.'
+        'Designed 10+ RESTful APIs and implemented backend features for scalable enterprise applications.',
+        'Maintained application performance by troubleshooting legacy code and optimizing SQL queries.',
+        'Integrated WhatsApp APIs, automated payment gateways, and AI chatbot assistant solutions.'
       ],
       tech: ['PHP', 'CodeIgniter 4', 'Java', 'Spring Boot', 'MySQL', 'PostgreSQL', 'REST APIs']
     },
     {
       company: 'Bluestock Fintech',
-      role: 'Software Developer Engineer Intern',
-      period: 'June 2025 - August 2025',
+      role: 'Software Development Engineer Intern',
+      period: 'June 2025 – August 2025',
       bullets: [
-        'Designed an IPO dashboard displaying multiple 50+ IPOs daily, improving market data accessibility.',
+        'Designed an IPO dashboard displaying 50+ daily stock issues, improving market data accessibility.',
         'Implemented 10+ RESTful APIs with Spring Boot and PostgreSQL, reducing data latency.',
-        'Collaborated in Agile teams with Git, improving sprint efficiency.'
+        'Collaborated in Agile teams with Git for code reviews, sprint planning, and version control.',
+        'Constructed automated data validation routines, improving backend stability and uptime.'
       ],
       tech: ['Java', 'Spring Boot', 'REST API', 'Hibernate', 'PostgreSQL', 'IntelliJ IDEA']
     }
@@ -31,13 +32,12 @@ export default function Experience() {
   return (
     <section id="experience" className="experience-section">
       <div className="section-header">
-        <span className="section-tag">01</span>
         <h2 className="section-title">Work Experience</h2>
       </div>
 
       <div className="experience-list">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="clean-card experience-card">
+          <div key={idx} className="clean-card exp-card">
             <div className="exp-top">
               <div>
                 <h3 className="exp-role">{exp.role}</h3>
