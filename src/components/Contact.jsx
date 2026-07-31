@@ -96,7 +96,7 @@ export default function Contact() {
 
               <div className="form-group">
                 <label htmlFor="email">Your Email Address</label>
-                <inpu
+                <input
                   type="email"
                   id="email"
                   required
