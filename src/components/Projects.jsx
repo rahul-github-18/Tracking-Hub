@@ -51,7 +51,7 @@ export default function Projects() {
         'Designed modular Swing & AWT view components adhering to object-oriented programming principles for extensible algorithm additions.'
       ],
       tech: ['Java', 'Swing', 'AWT', 'Multithreading', 'Algorithms', 'Eclipse IDE'],
-      liveUrl: '' // Blank placeholder for live link
+      // liveUrl: '' // Blank placeholder for live link
     }
   ];
 
