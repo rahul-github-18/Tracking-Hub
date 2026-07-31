@@ -67,21 +67,18 @@ export default function Projects() {
           <div key={idx} className="clean-card project-card">
             <div className="proj-top">
               <span className="proj-category">{proj.category}</span>
-              <a
-                href={proj.liveUrl || '#'}
-                target={proj.liveUrl ? '_blank' : '_self'}
-                rel="noreferrer"
-                className="proj-live-btn"
-                onClick={(e) => {
-                  if (!proj.liveUrl) {
-                    e.preventDefault();
-                  }
-                }}
-              >
-                <Globe size={14} />
-                <span>Live App</span>
-                <ArrowUpRight size={13} />
-              </a>
+              {proj.liveUrl ? (
+                <a
+                  href={proj.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="proj-live-btn"
+                >
+                  <Globe size={14} />
+                  <span>Live App</span>
+                  <ArrowUpRight size={13} />
+                </a>
+              ) : null}
             </div>
 
             <h3 className="proj-title">{proj.title}</h3>
