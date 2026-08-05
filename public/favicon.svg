@@ -1,32 +1,108 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e293b"/>
+      <stop offset="0%" stop-color="#050a18"/>
+      <stop offset="40%" stop-color="#030611"/>
+      <stop offset="100%" stop-color="#010207"/>
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fde047"/>
-      <stop offset="50%" stop-color="#eab308"/>
-      <stop offset="100%" stop-color="#b45309"/>
+
+    <!-- Blue R Gradient -->
+    <linearGradient id="blueGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#00b4ff"/>
+      <stop offset="35%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#0038b8"/>
     </linearGradient>
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#fef08a"/>
+
+    <!-- Orange R Gradient -->
+    <linearGradient id="orangeGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#ffaa00"/>
+      <stop offset="45%" stop-color="#ff4500"/>
+      <stop offset="100%" stop-color="#cc0000"/>
     </linearGradient>
+
+    <!-- Swoosh Orbit Gradient -->
+    <linearGradient id="swooshGrad" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="30%" stop-color="#0066ff"/>
+      <stop offset="52%" stop-color="#d92078"/>
+      <stop offset="78%" stop-color="#ff3b00"/>
+      <stop offset="100%" stop-color="#ff8800"/>
+    </linearGradient>
+
+    <!-- High quality drop shadow for Orange R overlap -->
+    <filter id="shadowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-8" dy="6" stdDeviation="7" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
   </defs>
 
-  <!-- Background Tile -->
-  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#bgGrad)" stroke="url(#accentGrad)" stroke-width="16"/>
+  <!-- Background Squircle with subtle border glow -->
+  <rect x="0" y="0" width="512" height="512" rx="108" fill="url(#bgGrad)"/>
 
-  <!-- Decorative Accent Line -->
-  <rect x="80" y="80" width="352" height="352" rx="68" fill="none" stroke="#fde047" stroke-width="2" stroke-opacity="0.3"/>
+  <!-- Left Blue "R" -->
+  <g>
+    <!-- Main Body of Blue R -->
+    <path d="
+      M 124 130
+      L 236 130
+      C 282 130, 302 154, 302 190
+      C 302 222, 278 244, 236 248
+      L 312 368
+      L 254 368
+      L 188 252
+      L 156 252
+      L 126 320
+      L 118 320
+      L 138 272
+      L 145 256
+      L 135 240
+      L 160 184
+      Z
+      
+      M 196 160
+      L 178 206
+      L 222 206
+      C 240 206, 252 198, 252 184
+      C 252 170, 240 160, 222 160
+      Z
+    " fill="url(#blueGrad)"/>
+  </g>
 
-  <!-- Code Bracket Left < -->
-  <path d="M 120 216 L 75 256 L 120 296" fill="none" stroke="url(#accentGrad)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right Orange "R" with overlapping 3D shadow -->
+  <g filter="url(#shadowFilter)">
+    <path d="
+      M 238 170
+      L 350 170
+      C 396 170, 416 194, 416 230
+      C 416 262, 392 284, 350 288
+      L 426 408
+      L 368 408
+      L 302 292
+      L 270 292
+      L 240 360
+      L 232 360
+      L 252 312
+      L 259 296
+      L 249 280
+      L 274 224
+      Z
+      
+      M 310 200
+      L 292 246
+      L 336 246
+      C 354 246, 366 238, 366 224
+      C 366 210, 354 200, 336 200
+      Z
+    " fill="url(#orangeGrad)"/>
+  </g>
 
-  <!-- Monogram RR -->
-  <text x="256" y="318" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="180" font-weight="900" fill="url(#textGrad)" text-anchor="middle" letter-spacing="-8">RR</text>
-
-  <!-- Code Bracket Right /> -->
-  <path d="M 392 216 L 437 256 L 392 296" fill="none" stroke="url(#accentGrad)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Swoosh Orbit Ring -->
+  <path d="
+    M 76 255
+    C 70 318, 118 388, 215 394
+    C 285 398, 348 365, 448 255
+    C 348 346, 282 376, 210 372
+    C 128 366, 86 313, 90 255
+    Z
+  " fill="url(#swooshGrad)"/>
 </svg>
